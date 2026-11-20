@@ -44,7 +44,7 @@ The [QR code scanner](https://qrcode-ai.com/en-US/qr-code-scanner) and the [barc
 
 To make a test image, encode a known text with the [QR code generator](https://qrcode-ai.com/en-US/qr-code-generator) or the [barcode generator](https://qrcode-ai.com/en-US/barcode-generator), commit the picture, and list the text as an expected payload. The action then proves on every push that the image still says what you meant.
 
-The action is not listed on GitHub Marketplace yet. Until it is, a workflow of the engine repository runs it from its folder, `./integrations/github-action`.
+The action has been public since 20 November 2026 in its own repository, [`qrcode-ai-com/qrcode-barcode-scanner-action`](https://github.com/qrcode-ai-com/qrcode-barcode-scanner-action), with the release [`v1.0.0`](https://github.com/qrcode-ai-com/qrcode-barcode-scanner-action/releases/tag/v1.0.0) and the tag `v1`. It is not listed on GitHub Marketplace yet. A workflow of the engine repository also runs it from its folder, `./integrations/github-action`.
 
 ## How it works
 
@@ -218,7 +218,7 @@ python3 scripts/stage-action-satellite.py stage --out /absolute/empty/folder
 python3 scripts/stage-action-satellite.py verify /absolute/empty/folder
 ```
 
-The stage reads one commit, checks that the hashes pinned in `src/releases.mjs` equal the release manifest of their version, and writes `SOURCE.json` with the sha256 of every file. The workflow in [mirror/](https://github.com/qrcode-ai-com/qrcode-barcode-scanner-rust/blob/eb18fee880cf37694502b1da416d5cb931729592/integrations/github-action/mirror/test.yml) becomes the repository's own test.
+The stage reads one commit, checks that the hashes pinned in `src/releases.mjs` equal the release manifest of their version, and writes `SOURCE.json` with the sha256 of every file. The workflow in [mirror/](https://github.com/qrcode-ai-com/qrcode-barcode-scanner-rust/blob/e5c48668149332219d903208e1882d27e7cab063/integrations/github-action/mirror/test.yml) becomes the repository's own test.
 
 ## Licenses of what you install
 
